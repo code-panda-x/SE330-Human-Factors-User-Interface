@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64cd6533-a9f4-45d0-8f30-6138a6dc1b12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/head_rush_funnel_app_store/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/head_rush_funnel_app_store/pubspec.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pnb3H2siPQkg8hhPflU031GEOD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../E-commerce-App-UI-Flutter-master/E-commerce-App-UI-Flutter-master" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64cd6533-a9f4-45d0-8f30-6138a6dc1b12" name="Default Changelist" comment="" />
+      <created>1615821600552</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615821600552</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="451" y="66" width="1018" height="896" key="#Plugins" timestamp="1615822162342">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="451" y="66" width="1018" height="896" key="#Plugins/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1615822162342" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615821634171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1615821634171" />
+    <state x="305" y="163" width="1336" height="624" key="AVDManager" timestamp="1615828054620">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="305" y="163" width="1336" height="624" key="AVDManager/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1615828054620" />
+    <state x="753" y="230" key="FileChooserDialogImpl" timestamp="1615828103648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="230" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1615828103648" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1615821820358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1615821820358" />
+    <state x="539" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1615822150217">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="183" width="840" height="856" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1615822150217" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1615821863861" />
+  </component>
+</project>
