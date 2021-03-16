@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:head_rush_funnel_app_store/Pages/homepage.dart';
+import 'package:head_rush_funnel_app_store/Pages/home/homepage.dart';
 
 class Firstpage extends StatelessWidget {
   @override
