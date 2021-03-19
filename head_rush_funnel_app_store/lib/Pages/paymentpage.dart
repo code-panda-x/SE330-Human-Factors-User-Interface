@@ -24,20 +24,11 @@ class PaymentPage extends State<Payment> {
             Column(
               children: <Widget>[
                 new Container(
-                  padding: (EdgeInsets.only(top: 20, left: 20)),
-                  child: Text(
-                    "Payment Total: " + total + " USD",
-                    style: TextStyle(
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-                new Container(
                     color: Colors.white,
                     child: new Container(
                       child: new Center(
                           child: new Column(children: [
-                        new Padding(padding: EdgeInsets.only(top: 40.0)),
+                        new Padding(padding: EdgeInsets.only(top: 30.0)),
                         new Text(
                           'Name',
                           style: new TextStyle(
@@ -349,7 +340,16 @@ class PaymentPage extends State<Payment> {
                 ),
                 Text('1+ Week'),
                 new Container(
-                  padding: (EdgeInsets.only(top: 50, left: 35, right: 35)),
+                  padding: (EdgeInsets.only(top: 20, left: 20)),
+                  child: Text(
+                    "Payment Total: " + total + " USD",
+                    style: TextStyle(
+                      fontSize: 25,
+                    ),
+                  ),
+                ),
+                new Container(
+                  padding: (EdgeInsets.only(top: 20, left: 35, right: 35)),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       // background color
