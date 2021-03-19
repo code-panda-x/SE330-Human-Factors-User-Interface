@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:head_rush_funnel_app_store/Pages/cartpage.dart';
+import 'package:head_rush_funnel_app_store/Pages/cart/cartpage.dart';
 
 class Item1 extends StatelessWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:head_rush_funnel_app_store/pages/homepage.dart';
+import 'package:head_rush_funnel_app_store/pages/home/homepage.dart';
 
 class ConfirmPage extends StatelessWidget {
   @override
