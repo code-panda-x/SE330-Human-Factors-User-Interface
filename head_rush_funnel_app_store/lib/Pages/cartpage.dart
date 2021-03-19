@@ -27,7 +27,7 @@ class CartPage extends StatelessWidget {
                 onPressed: () {
                   // Navigate to second route when tapped.
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return PaymentPage();
+                    return Payment();
                   }));
                 },
               ),

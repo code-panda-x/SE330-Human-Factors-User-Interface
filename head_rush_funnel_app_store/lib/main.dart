@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:head_rush_funnel_app_store/Pages/paymentpage.dart';
 import 'Pages/firstpage.dart';
 
 void main() {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Firstpage(),
+      home: Payment(),
     );
   }
 }
