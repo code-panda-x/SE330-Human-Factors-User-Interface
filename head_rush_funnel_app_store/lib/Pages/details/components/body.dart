@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:head_rush_funnel_app_store/Models/Product.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/add_to_cart.dart';
+import 'package:head_rush_funnel_app_store/Pages/details/components/clicker.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/color_and_size.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/counter.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/description.dart';
@@ -43,7 +44,7 @@ class Body extends StatelessWidget {
                       SizedBox(height: 10),
                       Description(product: product),
                       SizedBox(height: 10),
-                      SizedBox(height: 10),
+                      Clicker(),
                       AddToCart(product: product)
                     ],
                   ),
