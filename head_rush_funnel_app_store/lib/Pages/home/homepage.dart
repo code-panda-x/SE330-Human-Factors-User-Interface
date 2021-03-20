@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:head_rush_funnel_app_store/Models/Product.dart';
+import 'package:head_rush_funnel_app_store/Pages/cart/cartpage.dart';
 
 import 'components/body.dart';
 
@@ -7,10 +9,32 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("App store Homepage"),
-      ),
+      appBar: buildAppBar(context),
       body: Body(),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      //    leading: IconButton(
+      //      icon: SvgPicture.asset("assets/icons/back.svg"),
+      //     onPressed: () {},
+      //    ),
+      actions: <Widget>[
+        IconButton(
+          icon: SvgPicture.asset(
+            "assets/icons/cart.svg",
+            // By default our  icon color is white
+          ),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return CartPage();
+            }));
+          },
+        ),
+        SizedBox(width: 10)
+      ],
     );
   }
 }
