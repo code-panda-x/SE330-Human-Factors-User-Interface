@@ -6,12 +6,12 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Your Cart"),
-        ),
-        body: Body(),
-        bottomNavigationBar: CheckOutCard(),
-            /*new Container(
+      appBar: AppBar(
+        title: Text("Your Cart"),
+      ),
+      body: Body(),
+      bottomNavigationBar: CheckOutCard(),
+      /*new Container(
               padding: (EdgeInsets.only(top: 50, left: 35, right: 35)),
               child: ElevatedButton(
                 child: Text('Check out'),
@@ -23,7 +23,7 @@ class CartPage extends StatelessWidget {
                 },
               ),
             ),*/
-      );
+    );
   }
 }
 
@@ -40,9 +40,7 @@ class CheckOutCard extends StatelessWidget {
         horizontal: 20,
       ),
       height: 150,
-      decoration: BoxDecoration(
-        color: Colors.white, 
-        boxShadow: [
+      decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
           offset: Offset(0, -15),
           blurRadius: 20,
@@ -51,61 +49,61 @@ class CheckOutCard extends StatelessWidget {
       ]),
       child: Column(
         children: [
-          Row(children: [
-            Text(
-                "SubTotal: ", 
-                style: TextStyle(
-                fontSize: 12, 
-                color: Colors.black),),
-            Spacer(),
-            Text(
-              "\$(TotalPrice)", 
-              style: TextStyle(
-              fontSize: 12, 
-              color: Colors.black),)
-          ],),
-          Row(children: [
-            Text(
-                "Discount: ", 
-                style: TextStyle(
-                fontSize: 12, 
-                color: Colors.black),),
-            Spacer(),
-            Text(
-              "-\$(20% Discount)", 
-              style: TextStyle(
-              fontSize: 12, 
-              color: Colors.black),)
-          ],),
-          Row(children: [
-            Text(
-                "Total: ", 
-                style: TextStyle(
-                fontSize: 12, 
-                color: Colors.black),),
-            Spacer(),
-            Text(
-              "\$(TotalPrice)", 
-              style: TextStyle(
-              fontSize: 12, 
-              color: Colors.black),)
-          ],),
-          SizedBox(   //Use of SizedBox 
-                height: 10, 
-          ), 
+          Row(
+            children: [
+              Text(
+                "SubTotal: ",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              ),
+              Spacer(),
+              Text(
+                "\$(TotalPrice)",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                "Discount: ",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              ),
+              Spacer(),
+              Text(
+                "-\$(20% Discount)",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              )
+            ],
+          ),
+          Row(
+            children: [
+              Text(
+                "Total: ",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              ),
+              Spacer(),
+              Text(
+                "\$(TotalPrice)",
+                style: TextStyle(fontSize: 12, color: Colors.black),
+              )
+            ],
+          ),
           SizedBox(
-            width: 200,
-            height: 50,
-            child: ElevatedButton(
-              child: Text('Check Out'),
-              onPressed: () {
-                // Navigate to second route when tapped.
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return PaymentPage();
-                }));
-
-              })
-          )
+            //Use of SizedBox
+            height: 10,
+          ),
+          SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(
+                  child: Text('Check Out'),
+                  onPressed: () {
+                    // Navigate to second route when tapped.
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Payment();
+                    }));
+                  }))
         ],
       ),
     );
