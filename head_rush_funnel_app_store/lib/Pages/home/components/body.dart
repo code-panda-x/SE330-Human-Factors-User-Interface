@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:head_rush_funnel_app_store/Models/Product.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/details_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -9,12 +10,12 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
+          alignment: Alignment.center,
           padding: (EdgeInsets.only(top: 50)),
           child: Text(
             "Buy 3 get 20% off!",
-            style: TextStyle(
-              fontSize: 40,
-            ),
+            style: GoogleFonts.anton(fontSize: 30, color: Colors.blue),
+            textAlign: TextAlign.center,
           ),
         ),
         Expanded(
