@@ -75,4 +75,4 @@ List<Product> products = [
   ),
 ];
 
-String dummyText = "Lorem Ipsum is simply dummy text of the printing";
+String dummyText = "";
