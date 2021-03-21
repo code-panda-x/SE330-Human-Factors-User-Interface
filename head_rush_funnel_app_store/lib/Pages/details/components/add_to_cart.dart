@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:head_rush_funnel_app_store/Models/Product.dart';
+import 'package:head_rush_funnel_app_store/Pages/cart/cartpage.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
@@ -22,7 +23,6 @@ class AddToCart extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
                 color: product.color,
-                onPressed: () {},
                 child: Text(
                   "Buy  Now".toUpperCase(),
                   style: TextStyle(
@@ -31,6 +31,11 @@ class AddToCart extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return CartPage();
+                  }));
+                },
               ),
             ),
           ),

@@ -39,19 +39,15 @@ class CheckOutCard extends StatelessWidget {
     int numItems = 0;
     double discount = 0.0;
     double total = 0.0;
-    String active; 
-    for (int i = 0; i < demoCarts.length; i++)
-    {
+    String active;
+    for (int i = 0; i < demoCarts.length; i++) {
       subtotal += demoCarts[i].product.price * demoCarts[i].numOfItems;
       numItems += demoCarts[1].numOfItems;
     }
-    if(numItems > 3)
-    {
-      discount = -0.2; 
+    if (numItems > 3) {
+      discount = -0.2;
       active = "true : 3 or more items";
-    }
-    else
-    {
+    } else {
       discount = 0.0;
       active = "false : less then 3 items";
     }
