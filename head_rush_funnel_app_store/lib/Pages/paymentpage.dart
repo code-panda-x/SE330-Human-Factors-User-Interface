@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:head_rush_funnel_app_store/Pages/confirmpage.dart';
 
 class Payment extends StatefulWidget {
+  final double total1;
+
+  Payment({@required this.total1});
   PaymentPage createState() => PaymentPage();
 }
 
 class PaymentPage extends State<Payment> {
+
   bool _checked = false;
   bool _checked1 = false;
   bool _checked2 = false;
   bool value = false;
   bool value1 = false;
   bool value2 = false;
-  String total = "100";
+  //String total = "100";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -342,7 +346,7 @@ class PaymentPage extends State<Payment> {
                 new Container(
                   padding: (EdgeInsets.only(top: 20, left: 20)),
                   child: Text(
-                    "Payment Total: " + total + " USD",
+                    "Payment Total: ${widget.total1.toStringAsFixed(2)} USD",
                     style: TextStyle(
                       fontSize: 25,
                     ),

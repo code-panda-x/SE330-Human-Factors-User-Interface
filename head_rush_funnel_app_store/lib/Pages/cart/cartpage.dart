@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:head_rush_funnel_app_store/Models/Cart.dart';
 import 'package:head_rush_funnel_app_store/Pages/paymentpage.dart';
 import 'components/body.dart';
 
@@ -34,6 +35,29 @@ class CheckOutCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double subtotal = 0.0;
+    int numItems = 0;
+    double discount = 0.0;
+    double total = 0.0;
+    String active; 
+    for (int i = 0; i < demoCarts.length; i++)
+    {
+      subtotal += demoCarts[i].product.price * demoCarts[i].numOfItems;
+      numItems += demoCarts[1].numOfItems;
+    }
+    if(numItems > 3)
+    {
+      discount = -0.2; 
+      active = "true : 3 or more items";
+    }
+    else
+    {
+      discount = 0.0;
+      active = "false : less then 3 items";
+    }
+
+    total = subtotal * (discount + 1.0);
+
     return Container(
       padding: EdgeInsets.symmetric(
         vertical: 20,
@@ -57,7 +81,7 @@ class CheckOutCard extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "\$(TotalPrice)",
+                "\$(${subtotal.toStringAsFixed(2)})",
                 style: TextStyle(fontSize: 12, color: Colors.black),
               )
             ],
@@ -70,7 +94,7 @@ class CheckOutCard extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "-\$(20% Discount)",
+                "(20% Discount = $active)",
                 style: TextStyle(fontSize: 12, color: Colors.black),
               )
             ],
@@ -83,7 +107,7 @@ class CheckOutCard extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "\$(TotalPrice)",
+                "\$(${total.toStringAsFixed(2)})",
                 style: TextStyle(fontSize: 12, color: Colors.black),
               )
             ],
@@ -101,7 +125,7 @@ class CheckOutCard extends StatelessWidget {
                     // Navigate to second route when tapped.
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return Payment();
+                      return Payment(total1: total);
                     }));
                   }))
         ],
