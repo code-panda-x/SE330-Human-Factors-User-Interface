@@ -3,7 +3,7 @@ import 'package:head_rush_funnel_app_store/Models/Product.dart';
 
 class Cart {
   final Product product;
-  final int numOfItems;
+  int numOfItems;
 
   Cart({@required this.product, @required this.numOfItems});
 }

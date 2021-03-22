@@ -11,8 +11,21 @@ class CartPage extends StatelessWidget {
   CartPage({Key key, this.product, this.quantity}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    bool inCart = false;
     if (product != null) {
-      demoCarts.add(new Cart(product: product, numOfItems: quantity));
+      for(int i = 0; i < demoCarts.length; i++)
+      {
+        if(demoCarts[i].product == product)
+        {
+          demoCarts[i].numOfItems += quantity; 
+          inCart = true;
+        }
+      }
+      if(!inCart)
+      {
+        demoCarts.add(new Cart(product: product, numOfItems: quantity));
+      }
+      
     }
     return Scaffold(
       appBar: AppBar(
@@ -55,7 +68,7 @@ class CheckOutCard extends StatelessWidget {
       }
     }
 
-    if (numItems > 3) {
+    if (numItems >= 3) {
       discount = -0.2;
       active = "true : 3 or more items";
     } else {
@@ -88,7 +101,7 @@ class CheckOutCard extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "\$(${subtotal.toStringAsFixed(2)})",
+                "\$${subtotal.toStringAsFixed(2)}",
                 style: TextStyle(fontSize: 12, color: Colors.black),
               )
             ],
@@ -101,7 +114,7 @@ class CheckOutCard extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "(20% Discount = $active)",
+                "20% Discount = $active",
                 style: TextStyle(fontSize: 12, color: Colors.black),
               )
             ],
@@ -114,7 +127,7 @@ class CheckOutCard extends StatelessWidget {
               ),
               Spacer(),
               Text(
-                "\$(${total.toStringAsFixed(2)})",
+                "\$${total.toStringAsFixed(2)}",
                 style: TextStyle(fontSize: 12, color: Colors.black),
               )
             ],

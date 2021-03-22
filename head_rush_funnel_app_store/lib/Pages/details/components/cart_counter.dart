@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:head_rush_funnel_app_store/Pages/details/components/body.dart';
 
 class CartCounter extends StatefulWidget {
   int get numOfItems {
@@ -11,13 +12,13 @@ class CartCounter extends StatefulWidget {
 
 class _CartCounterState extends State<CartCounter> {
   int numOfItems = 1;
-
   int get numItems {
     return numOfItems;
   }
 
   @override
   Widget build(BuildContext context) {
+    totalItems = numOfItems;
     return Row(
       children: <Widget>[
         buildOutlineButton(
@@ -26,6 +27,7 @@ class _CartCounterState extends State<CartCounter> {
             if (numOfItems > 1) {
               setState(() {
                 numOfItems--;
+                totalItems--;
               });
             }
           },
@@ -43,6 +45,7 @@ class _CartCounterState extends State<CartCounter> {
             press: () {
               setState(() {
                 numOfItems++;
+                totalItems++;
               });
             }),
       ],
