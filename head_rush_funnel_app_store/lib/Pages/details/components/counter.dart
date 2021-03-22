@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'cart_counter.dart';
 
 class Counter extends StatelessWidget {
+  int get NumOfItems {
+    return CartCounter().numOfItems;
+  }
+
   const Counter({
     Key key,
   }) : super(key: key);

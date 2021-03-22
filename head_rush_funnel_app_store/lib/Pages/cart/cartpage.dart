@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:head_rush_funnel_app_store/Models/Cart.dart';
+import 'package:head_rush_funnel_app_store/Models/Product.dart';
 import 'package:head_rush_funnel_app_store/Pages/paymentpage.dart';
 import 'components/body.dart';
 
 class CartPage extends StatelessWidget {
+  final Product product;
+  final int quantity;
+
+  CartPage({Key key, this.product, this.quantity}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    if (product != null) {
+      demoCarts.add(new Cart(product: product, numOfItems: quantity));
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Your Cart"),
@@ -40,10 +48,13 @@ class CheckOutCard extends StatelessWidget {
     double discount = 0.0;
     double total = 0.0;
     String active;
-    for (int i = 0; i < demoCarts.length; i++) {
-      subtotal += demoCarts[i].product.price * demoCarts[i].numOfItems;
-      numItems += demoCarts[1].numOfItems;
+    if (demoCarts.length > 0) {
+      for (int i = 0; i < demoCarts.length; i++) {
+        subtotal += demoCarts[i].product.price * demoCarts[i].numOfItems;
+        numItems += demoCarts[i].numOfItems;
+      }
     }
+
     if (numItems > 3) {
       discount = -0.2;
       active = "true : 3 or more items";

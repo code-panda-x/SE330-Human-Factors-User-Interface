@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:head_rush_funnel_app_store/Models/Product.dart';
-import 'package:head_rush_funnel_app_store/Pages/details/components/add_to_cart.dart';
+import 'package:head_rush_funnel_app_store/Pages/cart/cartpage.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/clicker.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/color_and_size.dart';
 import 'package:head_rush_funnel_app_store/Pages/details/components/counter.dart';
@@ -45,7 +45,40 @@ class Body extends StatelessWidget {
                       Description(product: product),
                       SizedBox(height: 10),
                       Clicker(),
-                      AddToCart(product: product)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 18),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: SizedBox(
+                                height: 50,
+                                child: FlatButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(18)),
+                                  color: product.color,
+                                  child: Text(
+                                    "Buy  Now".toUpperCase(),
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => CartPage(
+                                                product: product,
+                                                quantity:
+                                                    Counter().NumOfItems)));
+                                  },
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),

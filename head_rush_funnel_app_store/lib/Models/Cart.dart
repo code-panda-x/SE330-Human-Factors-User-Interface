@@ -9,9 +9,4 @@ class Cart {
 }
 
 //Temp Data for demo thing
-List<Cart> demoCarts = [
-  Cart(product: products[0], numOfItems: 2),
-  Cart(product: products[1], numOfItems: 1),
-  Cart(product: products[2], numOfItems: 2),
-  Cart(product: products[3], numOfItems: 3),
-];
+List<Cart> demoCarts = [];

@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 
 class CartCounter extends StatefulWidget {
+  int get numOfItems {
+    return _CartCounterState().numItems;
+  }
+
   @override
   _CartCounterState createState() => _CartCounterState();
 }
 
 class _CartCounterState extends State<CartCounter> {
   int numOfItems = 1;
+
+  int get numItems {
+    return numOfItems;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(

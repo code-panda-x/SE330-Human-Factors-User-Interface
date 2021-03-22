@@ -29,7 +29,7 @@ class Homepage extends StatelessWidget {
           ),
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return CartPage();
+              return CartPage(product: null, quantity: 0);
             }));
           },
         ),

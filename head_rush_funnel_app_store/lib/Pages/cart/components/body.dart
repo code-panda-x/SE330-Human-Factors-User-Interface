@@ -8,40 +8,36 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Padding(
-      padding: 
-        EdgeInsets.symmetric(horizontal: 10),
+      padding: EdgeInsets.symmetric(horizontal: 10),
       child: ListView.builder(
         itemCount: demoCarts.length,
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Dismissible(
-              key: Key(demoCarts[index].product.id.toString()),
-              direction: DismissDirection.endToStart,
-              background: Container(
+            key: Key(demoCarts[index].product.id.toString()),
+            direction: DismissDirection.endToStart,
+            background: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(15)
-                  ),
-                  child: Row(
-                    children: [
-                      Spacer(),
-                      Text(
-                        "Remove", 
-                        style: TextStyle(
-                          fontSize: 12, 
-                          color: Colors.black),)
-                    ],)
-              ),
-              onDismissed: (direction) {
-                setState((){
-                  demoCarts.removeAt(index);
-                });
-              },
-              child: CartItemCard(cart: demoCarts[index]),
-            ),
+                    color: Colors.red, borderRadius: BorderRadius.circular(15)),
+                child: Row(
+                  children: [
+                    Spacer(),
+                    Text(
+                      "Remove",
+                      style: TextStyle(fontSize: 12, color: Colors.black),
+                    )
+                  ],
+                )),
+            onDismissed: (direction) {
+              setState(() {
+                demoCarts.removeAt(index);
+              });
+            },
+            child: CartItemCard(cart: demoCarts[index]),
+          ),
         ),
       ),
     );
@@ -61,17 +57,15 @@ class CartItemCard extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: 100, 
+          width: 100,
           child: AspectRatio(
             aspectRatio: 0.88,
             child: Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Color(0xFFF5F6F9),
-                borderRadius: BorderRadius.circular(15)
-              ),
-              child: Image.asset(cart.product.image)
-            ),
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Color(0xFFF5F6F9),
+                    borderRadius: BorderRadius.circular(15)),
+                child: Image.asset(cart.product.image)),
           ),
         ),
         SizedBox(width: 20),
@@ -86,21 +80,16 @@ class CartItemCard extends StatelessWidget {
             const SizedBox(height: 10),
             Text.rich(
               TextSpan(
-                text: "\$${cart.product.price}",
-                style: TextStyle(color: Colors.red),
-                children: [
-                  TextSpan(
-                    text: " x${cart.numOfItems}",
-                    style: TextStyle(color: Colors.black87)
-                  )
-                ]
-
-                ),
-              ),
+                  text: "\$${cart.product.price}",
+                  style: TextStyle(color: Colors.red),
+                  children: [
+                    TextSpan(
+                        text: " x${cart.numOfItems}",
+                        style: TextStyle(color: Colors.black87))
+                  ]),
+            ),
           ],
         )
-
-
       ],
     );
   }
