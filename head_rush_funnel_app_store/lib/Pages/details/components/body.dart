@@ -71,7 +71,7 @@ class Body extends StatelessWidget {
                                             builder: (context) => CartPage(
                                                 product: product,
                                                 quantity:
-                                                    Counter().NumOfItems)));
+                                                    totalItems)));
                                   },
                                 ),
                               ),
@@ -91,3 +91,6 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
+int totalItems; 

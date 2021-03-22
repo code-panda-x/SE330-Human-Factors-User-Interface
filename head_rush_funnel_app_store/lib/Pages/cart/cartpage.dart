@@ -17,7 +17,7 @@ class CartPage extends StatelessWidget {
       {
         if(demoCarts[i].product == product)
         {
-          demoCarts[i].numOfItems ++; 
+          demoCarts[i].numOfItems += quantity; 
           inCart = true;
         }
       }
