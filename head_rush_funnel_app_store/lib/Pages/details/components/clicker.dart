@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:head_rush_funnel_app_store/Models/Cart.dart';
+import 'package:head_rush_funnel_app_store/Models/Product.dart';
 
 class Clicker extends StatefulWidget {
   @override
@@ -24,6 +26,16 @@ class _ClickerState extends State<Clicker> {
               onChanged: (value) {
                 setState(() {
                   _checked = !_checked;
+                  demoCarts.add(new Cart(
+                      product: Product(
+                        id: 11,
+                        title: "Extra Funnel",
+                        price: 10,
+                        description: "",
+                        image: "assets/images/Funnel.PNG",
+                        color: Colors.blue,
+                      ),
+                      numOfItems: 1));
                 });
               },
             ),
@@ -37,6 +49,16 @@ class _ClickerState extends State<Clicker> {
               onChanged: (value1) {
                 setState(() {
                   _checked1 = !_checked1;
+                  demoCarts.add(new Cart(
+                      product: Product(
+                        id: 9,
+                        title: "Extra Tube",
+                        price: 7,
+                        description: "",
+                        image: "assets/images/Tube.PNG",
+                        color: Colors.blue,
+                      ),
+                      numOfItems: 1));
                 });
               },
             ),
@@ -50,6 +72,16 @@ class _ClickerState extends State<Clicker> {
               onChanged: (value2) {
                 setState(() {
                   _checked2 = !_checked2;
+                  demoCarts.add(new Cart(
+                      product: Product(
+                        id: 10,
+                        title: "Extra Nozzle",
+                        price: 5,
+                        description: "",
+                        image: "assets/images/Nozzle.PNG",
+                        color: Colors.blue,
+                      ),
+                      numOfItems: 1));
                 });
               },
             ),
